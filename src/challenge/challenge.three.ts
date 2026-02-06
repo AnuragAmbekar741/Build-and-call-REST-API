@@ -393,7 +393,8 @@ function computeThreat(
       launchRisk * 1
   );
 
-  const level = score >= 18 ? "HIGH" : score >= 10 ? "MEDIUM" : "LOW";
+  const level: "HIGH" | "MEDIUM" | "LOW" =
+    score >= 18 ? "HIGH" : score >= 10 ? "MEDIUM" : "LOW";
   return { score, level };
 }
 
